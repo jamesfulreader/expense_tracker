@@ -20,18 +20,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-zf+m%&1y%=z0vu(*9nlq2!fht9y4y2jc@5(@ymk=635tgx6^ib'
+SECRET_KEY = 'django-insecure-tqmb5yr_z74=6jiy0haa%n3z9q%5fucy%x$)-aqmr4x=7uc6$p'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = []
 
-REST_FRAMEWORK = {
-  'DEFAULT_PERMISSION_CLASSES': [
-   'rest_framework.permissions.AllowAny',
-    ]
-}
 
 # Application definition
 
@@ -42,9 +37,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rest_framework',
-    'corsheaders',
-    'api'
 ]
 
 MIDDLEWARE = [
@@ -55,7 +47,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'backend.urls'
@@ -130,7 +121,3 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-CORS_ALLOW_ALL_ORIGINS = True
-
-CORS_ALLOWS_CREDENTIALS = True
